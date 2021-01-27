@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class CarDealer {
 
   protected static HashMap<String, String> initDealer(){
-    HashMap<String, String> inventory = new HashMap<String, String>();
+    HashMap<String, String> inventory = new HashMap<>();
     System.out.println("Welcome to the Hot Java Car Dealership! \nWhere your car dreams are exactly that...\nDreams!");
     inventory.put("Model Y", "Tesla");
     inventory.put("Model X", "Tesla");
