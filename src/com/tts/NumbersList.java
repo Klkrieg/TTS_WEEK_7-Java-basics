@@ -3,42 +3,40 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class NumbersList {
 
-  protected static int[] getArray(){
+  protected static long[] getArray(){
     Scanner input = new Scanner(System.in);
+    System.out.println("--------------------");
     System.out.println("Please enter five numbers.");
-    System.out.println("First Number: ");
-    int num1 = input.nextInt();
-    System.out.println("Second Number: ");
-    int num2 = input.nextInt();
-    System.out.println("Third Number: ");
-    int num3 = input.nextInt();
-    System.out.println("Fourth Number: ");
-    int num4 = input.nextInt();
-    System.out.println("Fifth Number: ");
-    int num5 = input.nextInt();
-    int[] intArr = {num1, num2, num3, num4, num5};
-    System.out.println("Thank you. Your array is: " + Arrays.toString(intArr));
-    return intArr;
+    long[] longList = {0,0,0,0,0};
+    int i = 0;
+    while(i < longList.length){
+      System.out.println( "----------"+ (i + 1) +"----------");
+      long num = input.nextLong();
+      longList[i] = num;
+      i++;
+    }
+    System.out.println("Thank you. Your array is: " + Arrays.toString(longList));
+    return longList;
   }
-  protected static void arraySum(int[] arr){
-    int total = 0;
-    for(int num : arr){
+  protected static void arraySum(long[] arr){
+    long total = 0;
+    for(long num : arr){
       total += num;
     }
     System.out.printf("The sum of your array is: %d\n", total);
   }
 
-  protected static void arrayProduct(int[] arr){
-    int total = 1;
-    for(int num : arr){
+  protected static void arrayProduct(long[] arr){
+    long total = 1;
+    for(long num : arr){
       total *= num;
     }
     System.out.printf("The product of your array is: %d\n", total);
   }
 
-  protected static void findLargestInArray(int[] arr){
-    int largest = 0;
-    for(int num : arr){
+  protected static void findLargestInArray(long[] arr){
+    long largest = 0;
+    for(long num : arr){
       if(num > largest){
         largest = num;
       }
@@ -46,9 +44,9 @@ public class NumbersList {
     System.out.printf("The biggest integer in your array is: %d\n", largest);
   }
 
-  protected  static void findSmallestInArray(int[] arr){
-    int smallest = 0;
-    for(int num : arr){
+  protected  static void findSmallestInArray(long[] arr){
+    long smallest = 0;
+    for(long num : arr){
       if(num < smallest){
         smallest = num;
       }
@@ -56,7 +54,7 @@ public class NumbersList {
     System.out.printf("The smallest integer in your array is: %d\n", smallest);
   }
 
-  protected static void init(int[] arr){
+  protected static void init(long[] arr){
     boolean isRunning = true;
     Scanner input = new Scanner(System.in);
     while(isRunning) {

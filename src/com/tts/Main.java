@@ -1,12 +1,17 @@
 package com.tts;
-
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Main {
 
     public static void main(String[] args) {
-	      int[] myArr = NumbersList.getArray();
-        NumbersList.init(myArr);
+	    long[] myArr = NumbersList.getArray();
+      NumbersList.init(myArr);
+      HashMap<String, String> inventory = CarDealer.initDealer();
+      CarDealer.findCar(inventory);
+
     }
 }
