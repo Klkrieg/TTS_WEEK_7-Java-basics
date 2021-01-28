@@ -1,7 +1,6 @@
 package com.tts;
 import day3.ArrayPractice;
-import day4.MountainBike;
-import day4.Pet;
+import day4.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +9,7 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-      //DAY 2 ASSIGNMENT
+//      DAY 2 ASSIGNMENT
 	    long[] myArr = NumbersList.getArray();
       NumbersList.init(myArr);
       HashMap<String, String> inventory = CarDealer.initDealer();
@@ -21,8 +20,8 @@ public class Main {
       ArrayPractice.answerQuestionTwo();
       int sumOfSample = ArrayPractice.getSum(sampleArray);
       System.out.println(sumOfSample);
-      ArrayList<Integer> myArr = ArrayPractice.toPower(10, 5);
-      System.out.println(myArr.toString());
+      ArrayList<Integer> newArr = ArrayPractice.toPower(10, 5);
+      System.out.println(newArr.toString());
 
 //      DAY 4 ASSIGNMENT
       Pet myDog = new Pet("Tallis", 3, "Flagstaff", "Dog" );
@@ -51,6 +50,13 @@ public class Main {
       System.out.println(aprilsBike.toString());
       myBike.setTireWidth(2.6);
       System.out.println(myBike.getTireWidth());
+
+      ///Calculator
+      /////
+      MagicCalculator myCalc = new MagicCalculator();
+      //Only wrote a check for the hard part :)
+      myCalc.factorial(5);
+
     }
 
 
